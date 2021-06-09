@@ -1,0 +1,599 @@
+body{    
+    height: 100%!important;
+    max-height: 950px!important;
+    background-color: #50b849;
+    font-family: 'Comfortaa';
+    overflow-x: hidden; /* scroll horizontal*/
+    overflow-y: hidden; /* scroll vertical */
+}
+::-moz-selection {
+    color: #fff;
+    background: #b80100;
+}
+::selection {
+    color: #fff;
+    background: #b80100;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: black;
+    lighting-color: black 50%;
+   
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #318b2a;
+   
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #50b849;
+    
+}
+
+/*===========================SUPPORT ANIMAÇAO===========================*/
+
+.trans{
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.flowHide{
+    overflow: hidden;
+}
+
+
+/*===========================NAVBAR START===========================*/
+/* navbar de cima */
+.bg-dark {
+    background-color: #50b849!important;
+}
+
+.navbar {    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.navbar .navbar-brand{
+    margin-left: 5px!important;
+}
+/*HAMBURGER START*************************/
+
+.hamburger {
+    border-radius: 15px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 0px 10px 0px 0px;
+    margin-left: -15px;
+    transition: all 1s ease;
+}
+
+.cta {
+  height: 50px;
+  width: 50px;
+  cursor: pointer; }
+
+.toggle-btn {
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 0;
+  margin: auto;
+  transition: all 0.3s ease-in-out; 
+}
+  .toggle-btn:before {
+    content: "";
+    height: 2px;
+    width: 25px;
+    box-shadow: 0 -10px 0 0 #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out; 
+}
+  .toggle-btn:after {
+    content: "";
+    height: 2px;
+    width: 25px;
+    box-shadow: 0 10px 0 0 #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out; 
+}
+
+/* traço do meio do button do hamburger */
+.active .type14 {
+  background-color: #fff;
+  width: 12px;
+  margin: auto; 
+}
+  .active .type14:before {
+    width: 6px; 
+}
+  .active .type14:after {
+    width: 25px;
+}
+
+/*HAMBURGER END*************************/
+
+.nav-item .nav-link{
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+    /*color:#212879; */
+    font-size:15px;   
+    position: relative;
+    white-space: nowrap;
+}
+
+
+@media (min-width: 576px){
+.navbar-expand-sm .navbar-nav .nav-link {    
+    margin-left: 15px;
+}
+    }
+
+/*============================SIDE BAR START============================*/
+.sidebar-menu {   
+    position: fixed;
+    z-index: 99;
+    height: 100vh;
+    display: inline-block;
+    background-color: #50b849!important;
+    box-shadow: 0px 0px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: block;
+    min-height: 100%; 
+    transition: all .3s cubic-bezier(.55,0,.1,1);    
+}
+
+.sidebar-menu .navbar-nav .nav-link {
+    padding: 15;
+    position: relative;
+    white-space: nowrap;
+   
+    
+}
+
+.sidebar-menu .navbar-nav .nav-link i{
+    margin-left: 10px;
+    margin-bottom:5px;
+    
+}
+.sidebar-menu .nav-link:hover {
+       background-color: #318b2a;
+}
+
+/*SMALL SIDE BAR****************/
+.full-side-bar {
+    width: 260px!important;
+     transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+.small-side-bar{
+    width:50px;
+     transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+/* texto do hamburguer */
+.nav-link-name{
+    font-weight: bold;
+    position: relative;
+    margin-left: 15px;
+    
+}
+.nav-link-name {
+    position: absolute;
+    white-space: nowrap;
+    transition: opacity 0.4s ease-out 0s;
+    border-radius: 0.6rem;
+    padding: 4px 10px;
+    top: 9px;
+    left: 50px;
+   
+}
+.tax-active > .tax-show{
+/*     quando se passa por cima com o mouse */
+    display: inline-block !important; 
+    position: absolute;
+    white-space: nowrap;
+    transition: opacity 0.4s ease-out 0s; 
+    border-radius: 0.6rem;
+    padding: 4px 10px;
+    top: 9px;
+    left: 50px;
+    background-color:#318b2a;
+    
+}
+.tax-active > .tax-show::after {
+/*     seta de qunado se passa por cima do icon */
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -16px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-right: 15px solid #318b2a;
+   
+}
+.name-hide{
+    display: none;
+}
+
+
+/*///////////////ANIMATEED///////////////*/
+.animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation: mymove 1s ;
+    animation-iteration-count: 1;
+}
+
+/*FADE IN RIGHT*/
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+
+@keyframes fadeInRight{
+    
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+}
+
+/* .content{
+    padding-top:120px;
+} */
+.btn-primary{
+  background-color: #212879;
+}
+/* azul: #212879 */
+#conteiner-upload{
+  position: sticky;
+  margin-left: 200px!important;
+  margin-top: 120px!important;
+  width: 70%;
+left: 15%;
+}
+/* .container{
+    margin-top: 60px;
+    
+} */
+.card{
+  margin-left: 5%!important;
+    margin-top: 5%;
+    text-align: center;
+    border-radius: 5%;
+    border-width: 5px!important;
+    border-color: #fff!important;
+    background-color: #50b849;
+    /* 1-direita 2-baixo(6) 3-desfoque(20) 4-à volta? */
+    box-shadow: 0 6px 20px 3px #318b2a;
+
+}
+
+/* verde escuro #318b2a */
+/* verde #50b849 */
+.card .card-title{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%!important;
+    margin-top: 5%!important;
+    font-size: 25px!important;
+}
+
+.card .card-text{
+    font-weight: bold;
+    font-size: 20px!important;
+}
+
+img {
+    vertical-align: middle;
+    /*text-align: center!important; */
+    max-width: 70%;
+    max-height: 70%;
+/*  image-rendering: optimizeQuality;*/
+}
+
+/* painel escondido para mostrar o perfil */
+
+.sidepanel {
+    height: 100%; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: whitesmoke; /* Black*/
+    overflow-x: hidden; /* scroll horizontal*/
+    overflow-y: hidden; /* scroll vertical */
+    padding-top: 20px;
+    transition: 0.5s;
+  }
+
+  /* The sidepanel links */
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidepanel a:hover {
+    color: #50b849;
+  }
+
+   /* Position and style the close button (top left corner) */
+   .sidepanel .closebtn {
+     font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 36px;
+  }
+
+
+  /*** Perfil ***/
+  
+  /* Profile container */
+
+.profile {
+    margin: 20px 0;
+    text-align: center!important;
+  }
+  
+  /* Profile sidebar */
+  .profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+  }
+  
+  .profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+  }
+  
+  .profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  
+  .profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+  }
+  
+  .profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+  }
+      
+  .profile-usermenu {
+    margin-top: 30px;
+  }
+  
+  .profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+  }
+  
+  .profile-usermenu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+  }
+  
+  .profile-usermenu ul li.active {
+    border-bottom: none;
+  }
+  
+  .profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+  }
+  
+  /* Profile Content */
+  .profile-content {
+    padding: 20px;
+    background-color: black;
+    min-height: 460px;
+  }
+
+  /********************************************************************* button do upload dos ficheiros ******************************************************************************/
+  .custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + .75rem);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #fff;
+    content: "Procurar"!important;
+    background-color: #50b849;
+    border-left: inherit;
+    border-radius: 0 .25rem .25rem 0;
+  }
+  /* PARA A LABEL */
+  .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  /*************************************************************************************DASHBOARD************************************************************************************/
+  /*tirar o link para o site dos graficos*/
+  .searchbar{
+    margin-top: 2%;
+    height: 60px;
+    background-color: #212879;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    font-weight: bold;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #50b849;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:#50b849;
+    }
+
+  /* .canvasjs-chart-credit{
+    font-size: 0px!important;
+  } */
+  #divpdfs{
+    width: 100%;
+    height: 450px;
+  }
+  
+  #cliquedeletepdf{
+    -webkit-animation: color-change 4s infinite;
+        -moz-animation: color-change 4s infinite;
+        -o-animation: color-change 4s infinite;
+        -ms-animation: color-change 4s infinite;
+        animation: color-change 4s infinite;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    /* @-webkit-keyframes color-change {
+        0% { color: #50b849; }
+        25% { color: #318b2a; }
+        50% { color:  #212879}
+        75%{ color: #318b2a;}
+        100% { color: #50b849; }
+    }
+    @-moz-keyframes color-change {
+      0% { color: #50b849; }
+      25% { color: #318b2a; }
+      50% { color:  #212879}
+      75%{ color: #318b2a;}
+      100% { color: #50b849;}
+    }
+    @-ms-keyframes color-change {
+        0% { color: #50b849; }
+        25% { color: #2a6f8b; }
+        50% { color:  #212879}
+        75%{ color: #2a678b;}
+        100% { color: #50b849; }
+    }
+    @-o-keyframes color-change {
+        0% { color: #50b849; }
+        25% { color: #2a6f8b; }
+        50% { color:  #212879}
+        75%{ color: #2a678b;}
+        100% { color: #50b849; }
+    } */
+    @keyframes color-change {
+      0% { color: #343eb3; }
+      20%{color: #50b849;}
+      50% { color:  #318b2a}
+      80%{ color: #50b849;}
+      100% { color: #343eb3}
+    }
+  
+
+/*************************************************************************************DIV ACIMA DO INPUT DOS FICHEIROS************************************************************************************/
+  #div-aviso1{
+    margin-left: 35%!important;
+    margin-top: 150px;
+  }
+  #div-aviso2{
+    margin-left: 40%!important;
+    margin-top: 150px;
+  }
