@@ -12,6 +12,7 @@ if($stmt->execute()){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     foreach($stmt as $row){
         $database['lista_shopping'][]=$row;
+        // print_r(json_encode($row));
     }
 
 } 
